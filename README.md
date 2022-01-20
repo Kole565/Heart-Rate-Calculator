@@ -2,7 +2,7 @@
 Calculate max heart rate, pulse zones.
 
 ## Usage
-1. Open main.py
+1. Open __main__.py
 2. Enter your age and resting heart rate
 3. Watch result
 
