@@ -1,0 +1,6 @@
+.vscode
+
+.coverage
+coverate.xml
+
+__pycache__
