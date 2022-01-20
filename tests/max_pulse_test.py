@@ -78,9 +78,9 @@ class TestMaxPulse(unittest.TestCase):
         else:
             self.fail()
 
-    def test_vo2_zone(self):
-        self.assertEqual(vo2_zone(190, 60), (177, 190))
-        self.assertEqual(vo2_zone(190, 30), (174, 190))
+    def test_VO2_zone(self):
+        self.assertEqual(VO2_zone(190, 60), (177, 190))
+        self.assertEqual(VO2_zone(190, 30), (174, 190))
 
     def test_anaero_zone(self):
         self.assertEqual(anaero_zone(190, 60), (164, 177))

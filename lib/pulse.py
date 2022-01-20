@@ -33,7 +33,7 @@ def pulse_zone(lower, upper, max_hr, rest_hr):
 
     return (zone_lower, zone_upper)
 
-def vo2_zone(max_hr, rest_hr):
+def VO2_zone(max_hr, rest_hr):
     return pulse_zone(90, 100, max_hr, rest_hr)
 
 def anaero_zone(max_hr, rest_hr):
