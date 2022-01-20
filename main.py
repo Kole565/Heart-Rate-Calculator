@@ -15,6 +15,8 @@ for zone_func in [
         vo2_zone, anaero_zone, aero_zone, call_burn_zone, light_activity_zone
     ]:
     lower, uppper = zone_func(max_hr, rest_rate)
-    
+
     print("  {:16s}: {:d} - {:d}".format(zone_func.__name__[:-5],
                                                                 lower, uppper))
+
+input()
