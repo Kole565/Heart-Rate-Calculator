@@ -47,4 +47,19 @@ def call_burn_zone(max_hr, rest_hr):
 
 def light_activity_zone(max_hr, rest_hr):
     return pulse_zone(50, 60, max_hr, rest_hr)
-    
+
+
+ZONES = [
+    "VO2",
+    "Anaero",
+    "Aero",
+    "Call Burn",
+    "Light Activity",
+]
+ZONES_FUNC = [
+    VO2_zone,
+    anaero_zone,
+    aero_zone,
+    call_burn_zone,
+    light_activity_zone,
+]
