@@ -1,24 +1,13 @@
 # Heart Rate Calculatir
-Calculate max heart rate, pulse zones.
+A utility with a graphical interface that shows the zones of your heart rate.
 
-## Usage
-1. Open __main__.py
+## Usage (in source code mode)
+1. Open gui.pyw
 2. Enter your age and resting heart rate
-3. Watch result
-
-### OR (dev way):
-
-Run this code in cmd (when current folder contain programm):
-    
-    py hr_calculator
-    
-Run this code in cmd (when current folder is programm folder):
-    
-    py .
-    
+3. Enjoy
 
 ## Goal
-Рelp people with the selection of the pace for the pulse.
+To help people with the choice of pace for the heart.
 
 ## State
 Released.
