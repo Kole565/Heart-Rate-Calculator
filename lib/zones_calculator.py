@@ -1,4 +1,4 @@
-from heart_rate_zone import HeartRateZone
+from .heart_rate_zone import HeartRateZone
 
 
 class ZonesCalculator:
