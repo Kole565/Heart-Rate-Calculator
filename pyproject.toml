@@ -1,0 +1,5 @@
+[project]
+name = "frontend"
+
+[tool.pyside6-project]
+files = ["main.py", "main_window.py"]
