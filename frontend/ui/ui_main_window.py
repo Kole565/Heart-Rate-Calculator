@@ -25,7 +25,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(370, 315)
+        MainWindow.resize(667, 536)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -83,15 +83,30 @@ class Ui_MainWindow(object):
         self.zonesTable.setVerticalHeaderItem(3, __qtablewidgetitem6)
         __qtablewidgetitem7 = QTableWidgetItem()
         self.zonesTable.setVerticalHeaderItem(4, __qtablewidgetitem7)
+        __qtablewidgetitem8 = QTableWidgetItem()
+        self.zonesTable.setItem(0, 2, __qtablewidgetitem8)
+        __qtablewidgetitem9 = QTableWidgetItem()
+        self.zonesTable.setItem(1, 2, __qtablewidgetitem9)
+        __qtablewidgetitem10 = QTableWidgetItem()
+        self.zonesTable.setItem(2, 2, __qtablewidgetitem10)
+        __qtablewidgetitem11 = QTableWidgetItem()
+        self.zonesTable.setItem(3, 2, __qtablewidgetitem11)
+        __qtablewidgetitem12 = QTableWidgetItem()
+        self.zonesTable.setItem(4, 2, __qtablewidgetitem12)
         self.zonesTable.setObjectName(u"zonesTable")
         self.zonesTable.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
+        self.zonesTable.setSortingEnabled(False)
+        self.zonesTable.horizontalHeader().setVisible(True)
+        self.zonesTable.horizontalHeader().setDefaultSectionSize(100)
+        self.zonesTable.horizontalHeader().setStretchLastSection(True)
+        self.zonesTable.verticalHeader().setDefaultSectionSize(80)
 
         self.verticalLayout.addWidget(self.zonesTable)
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 370, 19))
+        self.menubar.setGeometry(QRect(0, 0, 667, 19))
         self.menuCalculator = QMenu(self.menubar)
         self.menuCalculator.setObjectName(u"menuCalculator")
         self.menuAbout = QMenu(self.menubar)
@@ -122,15 +137,30 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem2 = self.zonesTable.horizontalHeaderItem(2)
         ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Description", None));
         ___qtablewidgetitem3 = self.zonesTable.verticalHeaderItem(0)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Zone 1", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Zone 1 (Warmup)", None));
         ___qtablewidgetitem4 = self.zonesTable.verticalHeaderItem(1)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Zone 2", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Zone 2 (Fat Burning Zone)", None));
         ___qtablewidgetitem5 = self.zonesTable.verticalHeaderItem(2)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"Zone 3", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"Zone 3 (Intermediate)", None));
         ___qtablewidgetitem6 = self.zonesTable.verticalHeaderItem(3)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Zone 4", None));
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Zone 4 (Lactate Threshold)", None));
         ___qtablewidgetitem7 = self.zonesTable.verticalHeaderItem(4)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"Zone 5", None));
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"Zone 5 (VO2 Max)", None));
+
+        __sortingEnabled = self.zonesTable.isSortingEnabled()
+        self.zonesTable.setSortingEnabled(False)
+        ___qtablewidgetitem8 = self.zonesTable.item(0, 2)
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"Colloquially described as \u201cvery light,\u201d you could probably continuously exercise for 1 - 6 hours in zone one.", None));
+        ___qtablewidgetitem9 = self.zonesTable.item(1, 2)
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"Like zone one, you should be able to pretty much churn away in zone two all day long.", None));
+        ___qtablewidgetitem10 = self.zonesTable.item(2, 2)
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"Zone three is where you enter subjectively moderate exercise intensities but still stay in the aerobic zone.", None));
+        ___qtablewidgetitem11 = self.zonesTable.item(3, 2)
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"This heart rate zone corresponds to around lactate threshold; the point where the body begins to anaerobically generate ATP and produce more lactate than it can clear out or use.", None));
+        ___qtablewidgetitem12 = self.zonesTable.item(4, 2)
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"Zone five training typically involves brief, intermittent, all-out efforts (emphasis on brief).", None));
+        self.zonesTable.setSortingEnabled(__sortingEnabled)
+
         self.menuCalculator.setTitle(QCoreApplication.translate("MainWindow", u"Calculator", None))
         self.menuAbout.setTitle(QCoreApplication.translate("MainWindow", u"About", None))
     # retranslateUi
