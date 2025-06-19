@@ -10,6 +10,23 @@ from backend.calculator import Calculator
 from backend.exceptions import *
 
 
+def test_empty_init():
+    Calculator()
+
+def test_results_update():
+    age = 20
+    rest_hr = 60
+
+    calculator = Calculator()
+
+    calculator.calculate(age, rest_hr)
+    first = calculator.zones[:]
+
+    calculator.calculate(age + 1, rest_hr + 1)
+    second = calculator.zones[:]
+
+    assert (first != second) and (not (first is second))
+
 def test_zones_init():
     age = 20
     rest_hr = 60
@@ -46,3 +63,10 @@ def test_calc_init_vs_runtime():
 def test_invalid_input(age, rest_hr):
     with pytest.raises(InvalidInput):
         Calculator(age, rest_hr)
+
+def test_float_values():
+    age = 20
+    rest_hr = 60.0
+
+    calculator = Calculator(age, rest_hr)
+    calculator.calculate(age, rest_hr)

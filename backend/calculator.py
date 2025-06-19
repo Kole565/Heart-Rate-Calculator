@@ -11,15 +11,13 @@ class Calculator:
         [0.94, 1],
     ]
 
-    def __init__(self, age, rest_hr):
+    def __init__(self, age=None, rest_hr=None):
         self.zones = []
 
-        self.calculate(age, rest_hr)
+        if (age is not None) and (rest_hr is not None):
+            self.calculate(age, rest_hr)
 
     def calculate(self, age, rest_hr):
-        self._age = age
-        self._rest_hr = rest_hr
-
         self._validate_input(age, rest_hr)
         self._calculate_zones(age, rest_hr)
 
@@ -33,9 +31,6 @@ class Calculator:
             raise InvalidInput
 
     def _calculate_zones(self, age, rest_hr):
-        if (self._age, self._rest_hr) == (age, rest_hr) and self.zones:
-            return
-
         self.zones = []
 
         max_hr = 207 - 0.7 * age
