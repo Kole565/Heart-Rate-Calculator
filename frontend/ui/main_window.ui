@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>370</width>
-    <height>315</height>
+    <width>667</width>
+    <height>536</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -62,29 +62,44 @@
       <property name="editTriggers">
        <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
       </property>
+      <property name="sortingEnabled">
+       <bool>false</bool>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>100</number>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>80</number>
+      </attribute>
       <row>
        <property name="text">
-        <string>Zone 1</string>
+        <string>Zone 1 (Warmup)</string>
        </property>
       </row>
       <row>
        <property name="text">
-        <string>Zone 2</string>
+        <string>Zone 2 (Fat Burning Zone)</string>
        </property>
       </row>
       <row>
        <property name="text">
-        <string>Zone 3</string>
+        <string>Zone 3 (Intermediate)</string>
        </property>
       </row>
       <row>
        <property name="text">
-        <string>Zone 4</string>
+        <string>Zone 4 (Lactate Threshold)</string>
        </property>
       </row>
       <row>
        <property name="text">
-        <string>Zone 5</string>
+        <string>Zone 5 (VO2 Max)</string>
        </property>
       </row>
       <column>
@@ -102,6 +117,31 @@
         <string>Description</string>
        </property>
       </column>
+      <item row="0" column="2">
+       <property name="text">
+        <string>Colloquially described as “very light,” you could probably continuously exercise for 1 - 6 hours in zone one.</string>
+       </property>
+      </item>
+      <item row="1" column="2">
+       <property name="text">
+        <string>Like zone one, you should be able to pretty much churn away in zone two all day long.</string>
+       </property>
+      </item>
+      <item row="2" column="2">
+       <property name="text">
+        <string>Zone three is where you enter subjectively moderate exercise intensities but still stay in the aerobic zone.</string>
+       </property>
+      </item>
+      <item row="3" column="2">
+       <property name="text">
+        <string>This heart rate zone corresponds to around lactate threshold; the point where the body begins to anaerobically generate ATP and produce more lactate than it can clear out or use.</string>
+       </property>
+      </item>
+      <item row="4" column="2">
+       <property name="text">
+        <string>Zone five training typically involves brief, intermittent, all-out efforts (emphasis on brief).</string>
+       </property>
+      </item>
      </widget>
     </item>
    </layout>
@@ -111,7 +151,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>370</width>
+     <width>667</width>
      <height>19</height>
     </rect>
    </property>
