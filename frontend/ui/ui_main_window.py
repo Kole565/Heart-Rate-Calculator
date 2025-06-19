@@ -16,10 +16,10 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QHBoxLayout, QHeaderView, QLabel,
-    QLineEdit, QMainWindow, QMenu, QMenuBar,
-    QSizePolicy, QStatusBar, QTableWidget, QTableWidgetItem,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QAbstractItemView, QApplication, QHBoxLayout, QHeaderView,
+    QLabel, QLineEdit, QMainWindow, QMenu,
+    QMenuBar, QSizePolicy, QStatusBar, QTableWidget,
+    QTableWidgetItem, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -39,6 +39,7 @@ class Ui_MainWindow(object):
 
         self.ageInput = QLineEdit(self.centralwidget)
         self.ageInput.setObjectName(u"ageInput")
+        self.ageInput.setMaxLength(3)
 
         self.horizontalLayout.addWidget(self.ageInput)
 
@@ -54,6 +55,7 @@ class Ui_MainWindow(object):
 
         self.resthrInput = QLineEdit(self.centralwidget)
         self.resthrInput.setObjectName(u"resthrInput")
+        self.resthrInput.setMaxLength(3)
 
         self.horizontalLayout_2.addWidget(self.resthrInput)
 
@@ -82,6 +84,7 @@ class Ui_MainWindow(object):
         __qtablewidgetitem7 = QTableWidgetItem()
         self.zonesTable.setVerticalHeaderItem(4, __qtablewidgetitem7)
         self.zonesTable.setObjectName(u"zonesTable")
+        self.zonesTable.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
 
         self.verticalLayout.addWidget(self.zonesTable)
 
@@ -109,9 +112,9 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Enter age:", None))
-        self.ageInput.setInputMask(QCoreApplication.translate("MainWindow", u"D9", None))
+        self.ageInput.setInputMask("")
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Enter rest heart rate:", None))
-        self.resthrInput.setInputMask(QCoreApplication.translate("MainWindow", u"000", None))
+        self.resthrInput.setInputMask("")
         ___qtablewidgetitem = self.zonesTable.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Lower bound", None));
         ___qtablewidgetitem1 = self.zonesTable.horizontalHeaderItem(1)

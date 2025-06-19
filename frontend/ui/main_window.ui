@@ -27,7 +27,10 @@
       <item>
        <widget class="QLineEdit" name="ageInput">
         <property name="inputMask">
-         <string>D9</string>
+         <string/>
+        </property>
+        <property name="maxLength">
+         <number>3</number>
         </property>
        </widget>
       </item>
@@ -45,7 +48,10 @@
       <item>
        <widget class="QLineEdit" name="resthrInput">
         <property name="inputMask">
-         <string>000</string>
+         <string/>
+        </property>
+        <property name="maxLength">
+         <number>3</number>
         </property>
        </widget>
       </item>
@@ -53,6 +59,9 @@
     </item>
     <item>
      <widget class="QTableWidget" name="zonesTable">
+      <property name="editTriggers">
+       <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+      </property>
       <row>
        <property name="text">
         <string>Zone 1</string>
